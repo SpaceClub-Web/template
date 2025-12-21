@@ -6,6 +6,4 @@ permalink: "/about/"
 
 # About Space Club!
 
-
-## What about this website?
-If you're looking for info on the tech side of this website, you can read more on our [Under the Hood](/posts/under-the-hood) post.
+Space Club! is our way of putting content for this web template. Check out the pages, posts, events and search. Whats it built with? Great question, it is 11ty, Nunjucks

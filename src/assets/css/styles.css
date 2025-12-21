@@ -1,9 +1,4 @@
-@font-face {
-  font-family: "Ubuntu";
-  src: url("/assets/fonts/UbuntuSans-VariableFont_wdth,wght.ttf") format("truetype");
-  font-weight: 100 900;
-  font-style: normal;
-}
+/* Customise the colors on your website here! */
 
 :root {
   --bs-primary: #d4204d;
@@ -11,8 +6,34 @@
   --bs-primary-text-emphasis: #a00c31;
   --bs-secondary: #8200d8;
   --bs-secondary-rgb: 130, 0, 216;
+  --bs-secondary-text-emphasis: #4a0f72;
   --bs-heading-color: var(--bs-primary);
+  --divider-url: url('/assets/space-divider.svg');
+  --gradient: linear-gradient(135deg, #3BC7F6 0%, #A855F7 29.8%, #CC4D9E 69.3%, #EF4444 100%);
 }
+
+/* Customise your Font, change "Ubuntu" to another font */
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/assets/fonts/UbuntuSans-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+body {
+  font-family: "Ubuntu", var(--bs-body-font-family);
+}
+
+/* -------------------------------------------- */
+
+
+
+
+
+
+
+
 
 html {
   height: 100%;
@@ -23,7 +44,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  font-family: "Ubuntu", var(--bs-body-font-family);
 }
 
 .btn-primary {
@@ -46,8 +66,8 @@ body {
 .btn-secondary {
   --bs-btn-bg: var(--bs-primary);
   --bs-btn-border-color: var(--bs-primary);
-  --bs-btn-hover-bg: #9b184d;
-  --bs-btn-hover-border-color: #9b184d;
+  --bs-btn-hover-bg: var(--bs-secondary-text-emphasis);
+  --bs-btn-hover-border-color: var(--bs-secondary-text-emphasis);
 }
 
 .btn-outline-secondary {
@@ -72,12 +92,13 @@ body {
 }
 
 #footer-main .nav-link {
-  transition: border-width 0.1s ease-in-out;
-  border-radius: 8px;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 2px var(--bs-border-style) transparent !important;
+  border-radius: 0px;
 }
 
 #footer-main .nav-link:hover {
-  border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;
+  border-bottom: 2px var(--bs-border-style) var(--bs-border-color) !important;
   --bs-border-width: 3px;
 }
 
@@ -111,7 +132,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #3BC7F6 0%, #A855F7 29.8%, #CC4D9E 69.3%, #EF4444 100%);
+  background: var(--gradient);
   opacity: 1;
   pointer-events: none;
   z-index: 10;
@@ -119,7 +140,6 @@ body {
 }
 
 .divider {
-  --divider-url: url('/assets/space-divider.svg');
   position: relative;
   overflow-x: clip;
   overflow-y: visible;
@@ -148,6 +168,31 @@ body {
   background-size: auto 100%;
   transform: translate(-50%, 50%);
   pointer-events: none;
+}
+
+/* Homepage hero styles */
+.homepage-hero h1:first-child {
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.homepage-hero > p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.75;
+}
+
+/* Responsive sizing */
+@media (max-width: 768px) {
+  .homepage-hero h1:first-child {
+    font-size: 2.5rem;
+  }
+  
+  .homepage-hero > p {
+    font-size: 1.1rem;
+  }
 }
 
 
