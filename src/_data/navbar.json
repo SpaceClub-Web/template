@@ -8,5 +8,10 @@
     "title": "About",
     "href": "/about",
     "footer": true
+  },
+  {
+    "title": "Contact",
+    "href": "/contact",
+    "footer": true
   }
 ]
