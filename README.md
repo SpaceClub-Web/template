@@ -1,2 +1,1 @@
-# Websites Template
-A template for a simple static website.
+Use -> [SpaceClub! Template repo](https://github.com/orgs/TalkingSites/spaceclub-template) instead.
